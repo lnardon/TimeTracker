@@ -50,13 +50,14 @@
 }
 
 .time {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 500;
   color: #d1d1d1;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .playBtn {
   width: 25px;
-  filter: invert(100);
+  filter: invert(90);
+  cursor: pointer;
 }
