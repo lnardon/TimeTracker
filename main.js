@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require("electron");
+const notifier = require("node-notifier");
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -12,6 +13,10 @@ function createWindow() {
 
   win.setResizable(false);
   win.loadFile("index.html");
+  notifier.notify({
+    title: "My notification",
+    message: "Hello, there!",
+  });
 }
 
 app.whenReady().then(createWindow);

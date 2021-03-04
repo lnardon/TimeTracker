@@ -21,7 +21,7 @@
       <!-- MAIN APPLICATION -->
       <div class="systemBtns">
         <div class="btn close"></div>
-        <div class="btn minimize"></div>
+        <div onclick="toggleMenu()" class="btn minimize"></div>
       </div>
       <div class="central">
         <h1 class="time">45:00</h1>
@@ -31,11 +31,17 @@
           class="playBtn"
           onclick="startTimer(45)"
         />
-
-      <!-- MENU SECTION -->
-      <div class="menu">
-        <h2>sdiad</h2>
-      </div>
     </div>
+          <!-- MENU SECTION -->
+      <div class="menu">
+        <div class="configDiv">
+          <label for="theme">Theme:</label>
+          <select name="theme" id="theme">
+            <option select value="0">White</option>
+            <option value="1">Black</option>
+            <option value="2">Neon</option>
+          </select>
+        </div>
+      </div>
   </body>
 </html>

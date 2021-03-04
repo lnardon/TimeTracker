@@ -22,5 +22,8 @@
   "homepage": "https://github.com/lnardon/TimeTracker#readme",
   "devDependencies": {
     "electron": "^12.0.0"
+  },
+  "dependencies": {
+    "node-notifier": "^9.0.0"
   }
 }
