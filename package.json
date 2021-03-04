@@ -1,0 +1,26 @@
+{
+  "name": "timetracker",
+  "version": "1.0.0",
+  "description": "TimeTracker App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lnardon/TimeTracker.git"
+  },
+  "keywords": [
+    "lnardon"
+  ],
+  "author": "lnardon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lnardon/TimeTracker/issues"
+  },
+  "homepage": "https://github.com/lnardon/TimeTracker#readme",
+  "devDependencies": {
+    "electron": "^12.0.0"
+  }
+}
