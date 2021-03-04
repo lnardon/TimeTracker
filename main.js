@@ -10,6 +10,7 @@ function createWindow() {
     },
   });
 
+  win.setResizable(false);
   win.loadFile("index.html");
 }
 
