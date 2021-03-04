@@ -15,3 +15,13 @@ const startTimer = (time) => {
 const updateDisplay = (currentTime) => {
   document.getElementsByClassName("time")[0].innerText = currentTime;
 };
+
+const toggleMenu = () => {
+  if (document.getElementsByClassName("central")[0].style.display === "flex") {
+    document.getElementsByClassName("menu")[0].style.display = "flex";
+    document.getElementsByClassName("central")[0].style.display = "none";
+  } else {
+    document.getElementsByClassName("menu")[0].style.display = "none";
+    document.getElementsByClassName("central")[0].style.display = "flex";
+  }
+};
