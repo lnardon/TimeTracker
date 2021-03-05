@@ -25,3 +25,5 @@ const toggleMenu = () => {
     document.getElementsByClassName("central")[0].style.display = "flex";
   }
 };
+
+const test = new Notification("TEST", { body: "TEST BODY" });

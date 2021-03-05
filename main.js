@@ -1,5 +1,4 @@
-const { app, BrowserWindow } = require("electron");
-const notifier = require("node-notifier");
+const { app, BrowserWindow, Notification } = require("electron");
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -13,18 +12,12 @@ function createWindow() {
 
   win.setResizable(false);
   win.loadFile("index.html");
-  notifier.notify({
-    title: "My notification",
-    message: "Hello, there!",
-  });
 }
 
 app.whenReady().then(createWindow);
 
 app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
-    app.quit();
-  }
+  app.quit();
 });
 
 app.on("activate", () => {
@@ -32,3 +25,5 @@ app.on("activate", () => {
     createWindow();
   }
 });
+
+app.on("ready", () => {});
