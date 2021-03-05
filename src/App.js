@@ -32,6 +32,9 @@ const App = () => {
   const closeApp = () => {
     window.ipc.send("closeApp");
   };
+  const hideApp = () => {
+    window.ipc.send("hideApp");
+  };
 
   const fireNotification = (title, body) => new Notification(title, { body });
 
@@ -49,7 +52,7 @@ const App = () => {
     <div class="container">
       <div class="systemBtns">
         <div onClick={closeApp} class="btn close"></div>
-        <div onClick={toggleMenu} class="btn minimize"></div>
+        <div onClick={hideApp} class="btn minimize"></div>
       </div>
 
       {/* HOME */}
