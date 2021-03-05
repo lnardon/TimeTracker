@@ -7,7 +7,7 @@ const App = () => {
     let timerId;
     let globalTimer = time * 60;
     timerId = setInterval(() => {
-      if (globalTimer > 0) {
+      if (globalTimer >= 0) {
         updateDisplay(globalTimer);
         globalTimer--;
       } else {
@@ -15,10 +15,6 @@ const App = () => {
         fireNotification("YEEEEE HAAAAAAAAA", "Time is up");
       }
     }, 1000);
-  };
-
-  const updateDisplay = (currentTime) => {
-    document.getElementsByClassName("time")[0].innerText = currentTime;
   };
 
   const toggleMenu = () => {
@@ -39,6 +35,16 @@ const App = () => {
 
   const fireNotification = (title, body) => new Notification(title, { body });
 
+  const updateDisplay = (time) => {
+    let min = Math.floor(time / 60);
+    let sec = Math.floor(time % 60);
+    if (sec < 10) {
+      document.getElementsByClassName("time")[0].innerText = `${min}:0${sec}`;
+    } else {
+      document.getElementsByClassName("time")[0].innerText = `${min}:${sec}`;
+    }
+  };
+
   return (
     <div class="container">
       <div class="systemBtns">
@@ -53,7 +59,7 @@ const App = () => {
           src={play}
           alt="play"
           class="playBtn"
-          onClick={() => startTimer(45)}
+          onClick={() => startTimer(1)}
         />
       </div>
 

@@ -6,6 +6,7 @@ function createWindow() {
     frame: false,
     width: 350,
     height: 250,
+    icon: "./src/play.svg",
     webPreferences: {
       nodeIntegration: false,
       preload: __dirname + "/preload.js",
