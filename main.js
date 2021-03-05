@@ -1,4 +1,5 @@
-const { app, BrowserWindow, Notification } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
+const isDev = require("is-dev");
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -6,24 +7,19 @@ function createWindow() {
     width: 350,
     height: 250,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: false,
+      preload: __dirname + "/preload.js",
     },
   });
-
-  win.setResizable(false);
-  win.loadFile("index.html");
+  if (isDev) {
+    win.loadURL("http://localhost:3000");
+  } else {
+    win.loadFile("file://../build/index.html");
+  }
 }
 
-app.whenReady().then(createWindow);
+app.on("ready", createWindow);
 
-app.on("window-all-closed", () => {
+ipcMain.on("closeApp", () => {
   app.quit();
 });
-
-app.on("activate", () => {
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow();
-  }
-});
-
-app.on("ready", () => {});
