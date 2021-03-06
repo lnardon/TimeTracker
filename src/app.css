@@ -1,3 +1,12 @@
+:root {
+  --appBg: rgb(23, 23, 23);
+  --timeDisplay: #d1d1d1;
+  --closeBtn: rgb(255, 92, 92);
+  --minimizeBtn: rgb(255, 223, 81);
+  --menuLabels: #d1d1d1;
+  --menuSelectBorder: #d1d1d1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +18,7 @@
   width: 100vw;
   height: 100vh;
   padding: 0.75rem;
-  background-color: rgb(23, 23, 23);
+  background-color: var(--appBg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,11 +42,11 @@
 }
 
 .close:hover {
-  border: 1px solid rgb(255, 92, 92);
+  border: 1px solid var(--closeBtn);
 }
 
 .minimize:hover {
-  border: 1px solid rgb(255, 223, 81);
+  border: 1px solid var(--minimizeBtn);
 }
 
 .central {
@@ -52,7 +61,7 @@
 .time {
   font-size: 3rem;
   font-weight: 500;
-  color: #d1d1d1;
+  color: var(--timeDisplay);
   margin: 1rem;
 }
 
