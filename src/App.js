@@ -62,7 +62,7 @@ const App = () => {
           src={play}
           alt="play"
           class="playBtn"
-          onClick={() => startTimer(1)}
+          onClick={() => startTimer(45)}
         />
       </div>
 

@@ -1,6 +1,6 @@
 {
   "name": "timetracker",
-  "productName": "timetracker",
+  "productName": "Time Tracker App",
   "version": "0.1.0",
   "private": true,
   "main": "main.js",
