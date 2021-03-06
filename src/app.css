@@ -1,10 +1,10 @@
 :root {
-  --appBg: rgb(23, 23, 23);
-  --timeDisplay: #d1d1d1;
+  --appBg: #131313;
+  --timeDisplay: #e9e9e9;
   --closeBtn: rgb(255, 92, 92);
   --minimizeBtn: rgb(255, 223, 81);
-  --menuLabels: #d1d1d1;
-  --menuSelectBorder: #d1d1d1;
+  --menuLabels: #e9e9e9;
+  --menuSelectBorder: #e9e9e9;
 }
 
 * {
@@ -59,10 +59,10 @@
 }
 
 .time {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 500;
   color: var(--timeDisplay);
-  margin: 1rem;
+  margin: 0.75rem;
 }
 
 .playBtn {
@@ -88,12 +88,19 @@
 }
 
 #theme {
+  width: 175px;
   outline: none;
   background: transparent;
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
   cursor: pointer;
-  color: #d1d1d1;
   border: none;
-  border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid var(--menuSelectBorder);
+  color: var(--menuSelectBorder);
+}
+
+.label {
+  width: 100%;
+  color: var(--menuLabels);
+  margin-bottom: 0.25rem;
 }
