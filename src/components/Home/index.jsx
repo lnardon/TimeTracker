@@ -24,23 +24,22 @@ function Home({ time }) {
   const fireNotification = (title, body) => new Notification(title, { body });
 
   const updateDisplay = (time) => {
-    // let min = Math.floor(time / 60);
-    // let sec = Math.floor(time % 60);
-    // if (sec < 10) {
-    //   document.getElementsByClassName("time")[0].innerText = `${min}:0${sec}`;
-    // } else {
-    //   document.getElementsByClassName("time")[0].innerText = `${min}:${sec}`;
-    // }
-    document.getElementsByClassName("time")[0].innerText = time;
+    let min = Math.floor(time / 60);
+    let sec = Math.floor(time % 60);
+    if (sec < 10) {
+      document.getElementsByClassName("time")[0].innerText = `${min}:0${sec}`;
+    } else {
+      document.getElementsByClassName("time")[0].innerText = `${min}:${sec}`;
+    }
   };
 
   return (
-    <div class="central">
-      <h1 class="time">45:00</h1>
+    <div className="central">
+      <h1 className="time">45:00</h1>
       <img
         src={play}
         alt="play"
-        class="playBtn"
+        className="playBtn"
         onClick={() => startTimer(time)}
       />
     </div>

@@ -20,9 +20,9 @@ function SystemBar() {
   };
 
   return (
-    <div class="systemBtns">
-      <div onClick={closeApp} class="btn close"></div>
-      <div onClick={toggleMenu} class="btn minimize"></div>
+    <div className="systemBtns">
+      <div onClick={closeApp} className="btn close"></div>
+      <div onClick={toggleMenu} className="btn minimize"></div>
     </div>
   );
 }

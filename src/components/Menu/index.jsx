@@ -37,19 +37,18 @@ function Menu({ setTime }) {
   };
 
   return (
-    <div class="menu">
-      <div class="configDiv">
-        <label className="label" for="theme">
-          Time Period:
+    <div className="menu">
+      <div className="configDiv">
+        <label className="label" htmlFor="theme">
+          Focus Period:
         </label>
         <select
           name="time"
           id="theme"
           onChange={(e) => setTime(e.target.value)}
+          defaultValue={45}
         >
-          <option selected value={10}>
-            10min
-          </option>
+          <option value={10}>10min</option>
           <option value={15}>15min</option>
           <option value={30}>30min</option>
           <option value={45}>45min</option>
@@ -57,13 +56,16 @@ function Menu({ setTime }) {
           <option value={60}>60min</option>
         </select>
 
-        <label className="label" for="theme">
+        <label className="label" htmlFor="theme">
           Theme:
         </label>
-        <select name="theme" id="theme" onChange={(e) => themeSwitcher(e)}>
-          <option selected value="0">
-            Black
-          </option>
+        <select
+          defaultValue={"0"}
+          name="theme"
+          id="theme"
+          onChange={(e) => themeSwitcher(e)}
+        >
+          <option value="0">Black</option>
           <option value="1">White</option>
         </select>
       </div>
