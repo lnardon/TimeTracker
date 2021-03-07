@@ -97,6 +97,7 @@
   border: none;
   border-bottom: 1px solid var(--menuSelectBorder);
   color: var(--menuSelectBorder);
+  margin-bottom: 0.5rem;
 }
 
 .label {
