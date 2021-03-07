@@ -14,5 +14,7 @@ Coming soon...
 
 - Electron
 - Javascript
-- HTML
+- React
 - CSS
+- Electron-builder
+- Node.js
