@@ -1,5 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const isDev = require("is-dev");
+const path = require("path");
+const url = require("url");
 
 let win;
 function createWindow() {
@@ -13,11 +15,18 @@ function createWindow() {
       preload: __dirname + "/preload.js",
     },
   });
-  if (isDev) {
-    win.loadURL("http://localhost:3000");
-  } else {
-    win.loadFile("file://../build/index.html");
-  }
+  // if (isDev) {
+  //   win.loadURL("http://localhost:3000");
+  // } else {
+  //   win.loadFile("file://../build/index.html");
+  // }
+  win.loadURL(
+    url.format({
+      pathname: path.join(__dirname, "./build/index.html"),
+      protocol: "file:",
+      slashes: true,
+    })
+  );
 }
 
 app.on("ready", createWindow);
