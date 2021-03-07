@@ -5,11 +5,12 @@ import Menu from "./components/Menu";
 import SystemBar from "./components/SystemBar";
 
 const App = () => {
+  const [time, setTime] = React.useState(45);
   return (
     <div class="container">
       <SystemBar />
-      <Home />
-      <Menu />
+      <Home time={time} />
+      <Menu setTime={setTime} />
     </div>
   );
 };

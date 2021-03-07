@@ -1,6 +1,6 @@
 import React from "react";
 
-function Menu() {
+function Menu({ setTime }) {
   const themes = [
     {
       title: "CLASSIC BLACK",
@@ -40,6 +40,24 @@ function Menu() {
     <div class="menu">
       <div class="configDiv">
         <label className="label" for="theme">
+          Time Period:
+        </label>
+        <select
+          name="time"
+          id="theme"
+          onChange={(e) => setTime(e.target.value)}
+        >
+          <option selected value={10}>
+            10min
+          </option>
+          <option value={15}>15min</option>
+          <option value={30}>30min</option>
+          <option value={45}>45min</option>
+          <option value={50}>50min</option>
+          <option value={60}>60min</option>
+        </select>
+
+        <label className="label" for="theme">
           Theme:
         </label>
         <select name="theme" id="theme" onChange={(e) => themeSwitcher(e)}>
@@ -47,7 +65,6 @@ function Menu() {
             Black
           </option>
           <option value="1">White</option>
-          {/* <option value="2">Neon</option> */}
         </select>
       </div>
     </div>

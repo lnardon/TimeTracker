@@ -1,10 +1,12 @@
 import React from "react";
 import play from "../../play.svg";
 
-function Home() {
+function Home({ time }) {
   const startTimer = (time) => {
     let timerId;
     let globalTimer = time * 60;
+    updateDisplay(globalTimer);
+    globalTimer--;
     timerId = setInterval(() => {
       if (globalTimer >= 0) {
         updateDisplay(globalTimer);
@@ -22,13 +24,14 @@ function Home() {
   const fireNotification = (title, body) => new Notification(title, { body });
 
   const updateDisplay = (time) => {
-    let min = Math.floor(time / 60);
-    let sec = Math.floor(time % 60);
-    if (sec < 10) {
-      document.getElementsByClassName("time")[0].innerText = `${min}:0${sec}`;
-    } else {
-      document.getElementsByClassName("time")[0].innerText = `${min}:${sec}`;
-    }
+    // let min = Math.floor(time / 60);
+    // let sec = Math.floor(time % 60);
+    // if (sec < 10) {
+    //   document.getElementsByClassName("time")[0].innerText = `${min}:0${sec}`;
+    // } else {
+    //   document.getElementsByClassName("time")[0].innerText = `${min}:${sec}`;
+    // }
+    document.getElementsByClassName("time")[0].innerText = time;
   };
 
   return (
@@ -38,7 +41,7 @@ function Home() {
         src={play}
         alt="play"
         class="playBtn"
-        onClick={() => startTimer(45)}
+        onClick={() => startTimer(time)}
       />
     </div>
   );
