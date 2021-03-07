@@ -7,7 +7,7 @@ import SystemBar from "./components/SystemBar";
 const App = () => {
   const [time, setTime] = React.useState(45);
   return (
-    <div class="container">
+    <div className="container">
       <SystemBar />
       <Home time={time} />
       <Menu setTime={setTime} />
