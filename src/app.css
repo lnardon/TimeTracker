@@ -3,6 +3,7 @@
   --timeDisplay: #e9e9e9;
   --closeBtn: rgb(255, 92, 92);
   --minimizeBtn: rgb(255, 223, 81);
+  --menuBtn: rgb(12, 200, 135);
   --menuLabels: #e9e9e9;
   --menuSelectBorder: #e9e9e9;
 }
@@ -47,6 +48,10 @@
 
 .minimize:hover {
   border: 1px solid var(--minimizeBtn);
+}
+
+.settings:hover {
+  border: 1px solid var(--menuBtn);
 }
 
 .central {
