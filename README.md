@@ -8,9 +8,10 @@ With this application you can use the pomodoro technique to track the time spent
 
 ### Download
 
-MAC OS - V1.0(alpha) : https://mega.nz/file/kNwmACgB#FtEslsf4_KCrQvo09iuOHUq2OZmludlvRK5_g-JByuY
+MAC OS - V2.0 (BETA) : https://mega.nz/file/kNwmACgB#FtEslsf4_KCrQvo09iuOHUq2OZmludlvRK5_g-JByuY
+Linux - V2.0 (BETA) : https://mega.nz/file/0UwjUYyQ#yZxzz5ZiJJaxygNU0v_-MhrSv-EMyG3IOQqYQ78_e3s
 
-##### DISCLAIMER: This app is in alpha version and only tested in Mac OS Big Sur (Linux and Windows versions will be added on the final release.)
+##### DISCLAIMER: This app is in beta version and only tested in Mac OS Big Sur and Ubuntu 20.4
 
 ### What I used on this project
 
