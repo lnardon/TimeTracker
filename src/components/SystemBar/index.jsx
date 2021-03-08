@@ -18,12 +18,28 @@ function SystemBar() {
       document.getElementsByClassName("central")[0].style.display = "flex";
     }
   };
+  const setBtnLabel = (name) => {
+    document.getElementsByClassName("systemBtnLabel")[0].innerText = name;
+  };
 
   return (
-    <div className="systemBtns">
-      <div onClick={closeApp} className="btn close"></div>
-      <div onClick={hideApp} className="btn minimize"></div>
-      <div onClick={toggleMenu} className="btn settings"></div>
+    <div onMouseLeave={() => setBtnLabel("")} className="systemBtns">
+      <div
+        onMouseOver={() => setBtnLabel("Close")}
+        onClick={closeApp}
+        className="btn close"
+      ></div>
+      <div
+        onMouseOver={() => setBtnLabel("Minimize")}
+        onClick={hideApp}
+        className="btn minimize"
+      ></div>
+      <div
+        onMouseOver={() => setBtnLabel("Menu")}
+        onClick={toggleMenu}
+        className="btn settings"
+      ></div>
+      <span className="systemBtnLabel"></span>
     </div>
   );
 }
