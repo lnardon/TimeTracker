@@ -1,6 +1,8 @@
 import React from "react";
 
 function SystemBar() {
+  const [isMenu, setIsMenu] = React.useState(false);
+
   const closeApp = () => {
     window.ipc.send("closeApp");
   };
@@ -8,15 +10,14 @@ function SystemBar() {
     window.ipc.send("hideApp");
   };
   const toggleMenu = () => {
-    if (
-      document.getElementsByClassName("central")[0].style.display === "flex"
-    ) {
+    if (!isMenu) {
       document.getElementsByClassName("menu")[0].style.display = "flex";
       document.getElementsByClassName("central")[0].style.display = "none";
     } else {
       document.getElementsByClassName("menu")[0].style.display = "none";
       document.getElementsByClassName("central")[0].style.display = "flex";
     }
+    setIsMenu(!isMenu);
   };
   const setBtnLabel = (name) => {
     document.getElementsByClassName("systemBtnLabel")[0].innerText = name;

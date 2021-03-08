@@ -45,7 +45,12 @@ function Menu({ setTime }) {
         <select
           name="time"
           id="theme"
-          onChange={(e) => setTime(e.target.value)}
+          onChange={(e) => {
+            setTime(e.target.value);
+            document.getElementsByClassName(
+              "time"
+            )[0].innerText = `${e.target.value}:00`;
+          }}
           defaultValue={45}
         >
           <option value={10}>10min</option>
