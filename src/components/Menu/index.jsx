@@ -53,12 +53,14 @@ function Menu({ setTime }) {
           }}
           defaultValue={45}
         >
-          <option value={10}>10min</option>
-          <option value={15}>15min</option>
-          <option value={30}>30min</option>
-          <option value={45}>45min</option>
-          <option value={50}>50min</option>
-          <option value={60}>60min</option>
+          <option value={5}>5 min</option>
+          <option value={10}>10 min</option>
+          <option value={15}>15 min</option>
+          <option value={30}>30 min</option>
+          <option value={45}>45 min</option>
+          <option value={50}>50 min</option>
+          <option value={55}>55 min</option>
+          <option value={60}>60 min</option>
         </select>
 
         <label className="label" htmlFor="theme">
