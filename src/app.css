@@ -79,8 +79,8 @@
 
 .playBtn {
   width: 25px;
-  filter: invert(90);
   cursor: pointer;
+  fill: var(--timeDisplay);
 }
 
 .menu {
