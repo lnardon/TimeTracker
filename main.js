@@ -9,30 +9,30 @@ function createWindow() {
     frame: false,
     width: 350,
     height: 250,
-    icon: "./src/play.svg",
+    icon: path.join(__dirname, "assets/logo.png"),
     webPreferences: {
       nodeIntegration: false,
       preload: __dirname + "/preload.js",
     },
   });
-  if (isDev) {
-    win.loadURL("http://localhost:3000");
-  } else {
-    win.loadURL(
-      url.format({
-        pathname: path.join(__dirname, "./build/index.html"),
-        protocol: "file:",
-        slashes: true,
-      })
-    );
-  }
-  // win.loadURL(
-  //   url.format({
-  //     pathname: path.join(__dirname, "./build/index.html"),
-  //     protocol: "file:",
-  //     slashes: true,
-  //   })
-  // );
+  // if (isDev) {
+  //   win.loadURL("http://localhost:3000");
+  // } else {
+  //   win.loadURL(
+  //     url.format({
+  //       pathname: path.join(__dirname, "./build/index.html"),
+  //       protocol: "file:",
+  //       slashes: true,
+  //     })
+  //   );
+  // }
+  win.loadURL(
+    url.format({
+      pathname: path.join(__dirname, "./build/index.html"),
+      protocol: "file:",
+      slashes: true,
+    })
+  );
 }
 
 app.on("ready", createWindow);
