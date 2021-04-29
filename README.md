@@ -8,8 +8,8 @@ With this application, you can use the pomodoro technique to track the time spen
 
 ### Download
 
+- Linux - V2.0 (BETA) : https://mega.nz/file/hMpgTD4I#keXROg_W0S7O6A0PsyPRAz79GyHanccTWj4KxaI6OzU
 - MAC OS - V2.0 (BETA) : https://mega.nz/file/kNwmACgB#FtEslsf4_KCrQvo09iuOHUq2OZmludlvRK5_g-JByuY
-- Linux - V2.0 (BETA) : https://mega.nz/file/0UwjUYyQ#yZxzz5ZiJJaxygNU0v_-MhrSv-EMyG3IOQqYQ78_e3s
 
 ### Build the app from source code
 

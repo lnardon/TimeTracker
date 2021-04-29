@@ -1,7 +1,7 @@
 {
   "name": "timetracker",
   "productName": "Time Tracker App",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "main": "main.js",
   "homepage": "./",
@@ -39,9 +39,9 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "electron-pack": "build -c.extraMetadata.main=build/main.js",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/logo.png --prune=true --out=release-builds",
-    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/logo.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE",
-    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/logo.png --prune=true --out=release-builds"
+    "package-mac": "electron-packager . TimeTrackerApp --overwrite --platform=darwin --arch=x64 --icon=assets/logo.png --prune=true --out=release-builds",
+    "package-win": "electron-packager . TimeTracker --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/logo.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE",
+    "package-linux": "electron-packager . TimeTrackerApp --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/logo.png --prune=true --out=release-builds"
   },
   "eslintConfig": {
     "extends": "react-app"
